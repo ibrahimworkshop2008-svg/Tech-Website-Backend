@@ -22,6 +22,9 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully.");
+});
 app.use("/api/auth", registerRoute);
 app.use("/api/product", productRoute);
 
