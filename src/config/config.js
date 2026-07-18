@@ -44,6 +44,10 @@ if(!process.env.IMAGEKIT_PRIVATE) {
     throw new Error('IMAGEKIT_PRIVATE is not defined');
 }
 
+if(!process.env.APP_URL) {
+    throw new Error('APP_URL is not defined');
+}
+
 const config = {
     PORT: process.env.PORT || 5000,
     MONGO_URI: process.env.MONGO_URI || 'mongodb://localhost:27017/ecommerce',
@@ -55,6 +59,7 @@ const config = {
     USER_PASS: process.env.USER_PASS,
     SECRET_PASS: process.env.SECRET_PASS,
     IMAGEKIT_PRIVATE: process.env.IMAGEKIT_PRIVATE,
+    APP_URL: process.env.APP_URL || 'http://localhost:5000',
 }
 
 
