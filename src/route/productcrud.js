@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const productController = require("../controller/product.controller");
+const productController = require("../controller/Product.controller");
 const upload = require("../middleware/multer");
 // Create a new product
 const verifyToken = require("../middleware/verifyToken");
